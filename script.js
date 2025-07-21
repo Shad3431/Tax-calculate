@@ -43,7 +43,7 @@ function createInfoElement(content, tag) {
     element.append(content);
     return element;
 }
-export function calculateUATax(income) {
+function calculateUATax(income) {
     let tax = 0;
     if (income <= 86) {
         tax = income - 31;
@@ -52,6 +52,21 @@ export function calculateUATax(income) {
     }
     return tax
 
+}
+function calculateFederalTax(income) {
+    let tax = 0;
+    if (income <= 11784) {
+        tax = 0;
+    } else if (income <= 18000) {
+        tax = income * 0.14;
+    } else if (income <= 62810) {
+        tax = income * 0.24;
+    } else if (income <= 277825) {
+        tax = income * 0.42;
+    } else {
+        tax = income * 0.45;
+    }
+    return tax;
 }
 const country = document.getElementById('country');
 updateOptionForCountry(data);
