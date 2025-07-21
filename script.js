@@ -1,7 +1,3 @@
-import {updateOptionForCountry} from "./src/components/OptionsForCountry.js";
-import {updateOptionForState} from "./src/components/OptionsForState.js";
-import {calculateClick} from "./src/components/CalculateClick.js";
-
 const data = [
     {
         name: "Germany",
