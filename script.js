@@ -38,6 +38,11 @@ const data = [
         ]
     }
 ]
+function createInfoElement(content, tag) {
+    const element = document.createElement(tag);
+    element.append(content);
+    return element;
+}
 const country = document.getElementById('country');
 updateOptionForCountry(data);
 
