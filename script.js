@@ -99,6 +99,16 @@ function updateOptionForCountry(arr) {
             country.appendChild(el);
         });
 }
+function updateOptionForState(arr) {
+    state.innerHTML = "";
+    arr.map(obj => obj.state)
+        .forEach(s => {
+            const el = document.createElement('option');
+            el.value = s;
+            el.textContent = s;
+            state.appendChild(el);
+        });
+}
 const country = document.getElementById('country');
 updateOptionForCountry(data);
 
