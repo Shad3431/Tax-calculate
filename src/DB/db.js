@@ -1,3 +1,4 @@
+export { data };
 const data = [
     {
         name: "Germany",
